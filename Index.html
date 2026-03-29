@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Calculator </title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .calculator {
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        width: 280px;
+    }
+    .display {
+        background: #000;
+        color: #0f0;
+        font-size: 2em;
+        text-align: right;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        height: 50px;
+    }
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    button {
+        padding: 15px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        background: #444;
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    button:hover {
+        background: #666;
+    }
+    .operator {
+        background: #ff9500;
+    }
+    .operator:hover {
+        background: #e08900;
+    }
+    /* Delete button style */
+    .delete {
+        grid-column: span 2; /* Make it wider */
+        background: #ff3b3b;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    .delete:hover {
+        background: #e02a2a;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display">0</div>
+    <div class="buttons">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="operator">÷</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="operator">×</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="operator">−</button>
+
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+        <button class="operator">+</button>
+
+        <!-- New Delete Button -->
+        <button class="delete">⌫ Delete</button>
+    </div>
+</div>
+
+</body>
+</html>
+
